@@ -12,3 +12,25 @@ body {
 h1, h2, h3, p, a {
     text-align: center;
 }
+
+.depe {
+  display:block;
+}
+
+
+.codigos {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.colunaA {
+  text-align: center;
+  margin:20px;
+  display: block;
+}
+
+.colunaB {
+  text-align: center;
+  margin:20px;
+  display: block;
+}
