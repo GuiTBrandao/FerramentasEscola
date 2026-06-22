@@ -9,13 +9,6 @@
 
     <script>
 
-         //Impede de saír do site
-            document.addEventListener("DOMContentLoaded", () => {
-                const formulario = document.getElementById('codigos_ab');
-                formulario.addEventListener('submit', (e) =>{
-                    e.preventDefault();
-                });
-            });
 
         //Gera lista Salas
         const sala = {
@@ -50,8 +43,13 @@
 
     <div style="text-align: center; margin: 40px;">
 
-        
-    <form action="https://sheetdb.io/api/v1/tbsn8hj5wer7m" method="post" id="codigos_ab">
+    <form action="https://sheetdb.io/api/v1/hdozfqh8h7y5x" method="post" id="codigos_ab">
+
+        <p>Identifique-se</p>
+            <label>
+                <input type="text" name="professor">
+            </label>
+
         <p>Escolha a turma</p>
             <label>
                 <input type="radio" name="turma" value="sexto_ano" onchange="selecionarSala()"> 6º Ano
@@ -131,17 +129,29 @@
             <input type="checkbox" name="codB" id="codb20" value="B20 "><label for="" codb20="">B20</label>
 
             <br>
-
-            <br>
-
-            <p> assasd</p>
         
             <button type="submit" onclick="alert('Códigos Enviados')">Envio</button>
             </form>
     </div>
+
+        <script>
+        var form = document.getElementById("codigos_ab");
+            form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(
+                document.getElementById("codigos_ab")
+                )
+            })
+                .then((response) => response.json())
+                document.getElementById("codigos_ab").reset();
+            })
+    </script>
     
 
 
 
 
-</body></html>
+</body>
+</html>
