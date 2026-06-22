@@ -13,10 +13,14 @@ h1, h2, h3, p, a {
     text-align: center;
 }
 
+
+
+
+@media (max-width:400px) {
+
 .depe {
   display:block;
 }
-
 
 .codigos {
   display:grid;
@@ -33,4 +37,6 @@ h1, h2, h3, p, a {
   text-align: center;
   margin:20px;
   display: block;
+}
+
 }
