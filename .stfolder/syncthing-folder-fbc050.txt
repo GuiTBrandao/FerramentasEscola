@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: cldkp-it3vm
+created: 2026-09-30T22:45:17-03:00
